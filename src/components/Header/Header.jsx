@@ -13,11 +13,9 @@ const Header = () => {
           <Link to='/'>
             <img className='h-28' src={logo1} alt='Travel Guru' />
           </Link>
-          {/* <img
-              className='h-24'
-              src={logo2}
-              alt='Logo'
-            /> */}
+          {/* <Link to='/'>
+            <img className='h-28' src={logo2} alt='Travel Guru' />{" "}
+          </Link> */}
         </div>
 
         {/* Search */}
