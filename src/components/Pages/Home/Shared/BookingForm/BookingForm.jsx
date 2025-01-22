@@ -24,7 +24,7 @@ const BookingForm = () => {
             </h2>
             <form class='flex flex-col'>
               <label
-                class='text-sm mb-2 text-gray-900 cursor-pointer'
+                class='text-sm mb-2 text-gray-900'
                 for='origin'
               >
                 Origin
@@ -34,7 +34,7 @@ const BookingForm = () => {
                 type='text'
               />
               <label
-                class='text-sm mb-2 text-gray-900 cursor-pointer'
+                class='text-sm mb-2 text-gray-900'
                 for='destination'
               >
                 Destination
@@ -42,6 +42,8 @@ const BookingForm = () => {
               <input
                 class='bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150'
                 type='text'
+                value={placeName}
+                disabled
               />
 
               {/* Date */}

@@ -3,13 +3,13 @@
     "id": 1,
     "placeName": "Cox's Bazar",
     "info": "Cox's Bazar, the world's longest unbroken sea beach, stretches 120 kilometers along the southeastern coastline of Bangladesh. Renowned for its golden sands, turquoise waters, and stunning sunsets, it offers a perfect escape for travelers. Visitors can explore nearby attractions like Himchari, Inani Beach, and the vibrant local markets for handicrafts.",
-    "photo": "../src/assets/images/photos/CoxBazar.jpg"
+    "photo": "../src/assets/images/photos/CoxBazar.png"
   },
   {
     "id": 2,
     "placeName": "Sreemangal",
     "info": "Known as the tea capital of Bangladesh, Sreemangal is a serene town surrounded by lush green tea gardens, dense rainforests, and picturesque landscapes. It is a haven for nature lovers, offering attractions like Lawachara National Park, Madhabpur Lake, and the famous Seven Color Tea. Wildlife enthusiasts can spot rare species here.",
-    "photo": "../src/assets/images/photos/Sreemangal.png"
+    "photo": "../src/assets/images/photos/Sreemangal.jpg"
   },
   {
     "id": 3,
@@ -21,6 +21,6 @@
     "id": 4,
     "placeName": "Sajek",
     "info": "Sajek Valley, located in the Chittagong Hill Tracts, is a mesmerizing hill station often referred to as the “Roof of Rangamati.” Famous for its cloud-kissed mountains and vibrant tribal culture, Sajek offers panoramic views, adventure trails, and warm hospitality. It is a paradise for photography enthusiasts and peace seekers alike.",
-    "photo": "../src/assets/images/photos/Sajek.png"
+    "photo": "../src/assets/images/photos/Sajek.jpg"
   }
 ]
