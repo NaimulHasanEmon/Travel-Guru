@@ -1,9 +1,9 @@
-const PlaceCard = ({ photo, photos, setActivePhoto }) => {
+const PlaceCard = ({ currentPhoto, photos, setActivePhoto }) => {
   return (
-    <div className='absolute lg:top-[10%] xl:top-[20%] right-[0px] px-20 w-1/2 flex'>
-      <div className='flex flex-col gap-3 justify-center pl-[400px] mt-10 relative translate-y-[185px]'>
+    <div className="absolute lg:top-[10%] xl:top-[20%] right-[0px] px-20 w-1/2 flex">
+      <div className="flex flex-col gap-3 justify-center pl-[400px] mt-10 relative translate-y-[185px]">
         {photos.map((pic, index) => {
-          const isActive = pic === photo;
+          const isActive = pic === currentPhoto;
           return (
             <img
               key={index}
@@ -19,7 +19,7 @@ const PlaceCard = ({ photo, photos, setActivePhoto }) => {
                   ? "border-4 lg:rounded-2xl xl:rounded-3xl border-teal-400 lg:h-[384px] lg:w-64 xl:h-[432px] xl:w-72 absolute"
                   : "w-20 hover:h-28 absolute hover:z-10"
               }`}
-              alt=''
+              alt=""
             />
           );
         })}

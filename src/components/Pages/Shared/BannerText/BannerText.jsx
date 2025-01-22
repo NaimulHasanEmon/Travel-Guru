@@ -2,23 +2,16 @@ import { Link } from "react-router-dom";
 import "./BannerText.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const BannerText = ({ data }) => {
-  const { placeName, info } = data;
-
+const BannerText = ({ placeName, info }) => {
   return (
-    <div className='absolute lg:top-[25%] xl:top-[30%] left-10 w-1/2 px-10'>
-      <p className='text-8xl Cox-bazar-title text-white'>Cox's Bazar</p>
-      <p className='under-cox-bazar-title text-white'>
-        Cox's Bazar, located in Bangladesh, is renowned for its breathtaking
-        120-kilometer-long sandy beach, the world's longest uninterrupted sea
-        beach. Popular for its serene beauty, vibrant sunsets, and cultural
-        diversity, it attracts tourists globally for relaxation and exploration.
-      </p>
+    <div className="absolute lg:top-[25%] xl:top-[30%] left-10 w-1/2 px-10">
+      <p className="text-8xl Cox-bazar-title text-white mb-2">{placeName}</p>
+      <p className="under-cox-bazar-title text-xl text-white">{info}</p>
 
       {/* Booking Button */}
-      <div className='lg:mt-5 xl:mt-10'>
-        <Link to='' className='w-40 button-login'>
-          <div className='flex items-center'>
+      <div className="lg:mt-5 xl:mt-10">
+        <Link to="" className="w-40 button-login">
+          <div className="flex items-center">
             <span>Booking</span>
             <span>
               <FaLongArrowAltRight />
@@ -31,3 +24,4 @@ const BannerText = ({ data }) => {
 };
 
 export default BannerText;
+
