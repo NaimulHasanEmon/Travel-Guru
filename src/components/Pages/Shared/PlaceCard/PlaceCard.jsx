@@ -1,24 +1,23 @@
-const PlaceCard = ({ photo, photos }) => {
+const PlaceCard = ({ photo, photos, setActivePhoto }) => {
   return (
-    <div className='absolute top-1/4 right-[0px] px-20 w-1/2 flex'>
-      <div className='rounded-xl'>
-        <img
-          src={photo}
-          alt='image 1'
-          className='h-96 w-68 rounded-xl object-cover'
-        />
-      </div>
-      <div className='flex flex-col gap-3 justify-center ml-52'>
+    <div className='absolute lg:top-[10%] xl:top-[20%] right-[0px] px-20 w-1/2 flex'>
+      <div className='flex flex-col gap-3 justify-center pl-[400px] mt-10 relative translate-y-[185px]'>
         {photos.map((pic, index) => {
           const isActive = pic === photo;
           return (
             <img
               key={index}
               src={pic}
-              className={`h-20 mx rounded-lg object-cover transition-all duration-700 ease-in-out transform ${
+              onClick={() => setActivePhoto(pic)} // Set the clicked photo as active
+              style={{
+                transform: isActive
+                  ? `translateX(-400px)`
+                  : `translateY(${index * 60}px)`,
+              }}
+              className={`h-20 mx object-cover rounded-xl transition-all duration-700 ease-in-out cursor-pointer ${
                 isActive
-                  ? "border-[3px] border-teal-400 h-36 w-24 translate-x-[-120px] absolute"
-                  : "hover:border-2 w-20 hover:h-24 hover:translate-x-[15px]"
+                  ? "border-[3px] lg:rounded-2xl xl:rounded-3xl border-teal-400 lg:h-[384px] lg:w-64 xl:h-[432px] xl:w-72 absolute"
+                  : "hover:border-2 w-20 hover:h-28 absolute hover:z-10"
               }`}
               alt=''
             />

@@ -22,48 +22,53 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [photos]);
 
-  // handle left arrow function
   const handleLeftArrow = () => {
-    setPhotoIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+    setPhotoIndex(
+      (prevIndex) => (prevIndex - 1 + photos.length) % photos.length
+    );
   };
 
-  // handle right arrow function
   const handleRightArrow = () => {
     setPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
   };
 
-  // The selected photo based on the current index
   const currentPhoto = photos[photoIndex];
+
+  const setActivePhoto = (photo) => {
+    const newIndex = photos.indexOf(photo);
+    if (newIndex !== -1) {
+      setPhotoIndex(newIndex); // Update the index to the selected photo
+    }
+  };
 
   return (
     <div className='flex'>
-      {/* Background Banner */}
       <Banner photo={currentPhoto} />
 
-      {/* Left Column */}
       <div>
         <BannerText />
       </div>
 
-      {/* Right Column */}
       <div>
         <div>
           <PlaceCard
-            photo={currentPhoto} // Send the current photo to PlaceCard
-            photos={photos} // Send the entire photos array to PlaceCard
+            photo={currentPhoto}
+            photos={photos}
+            setActivePhoto={setActivePhoto} // Pass the handler to PlaceCard
           />
         </div>
 
-        {/* Navigation Arrows */}
-        <div className='absolute bottom-[50px] right-[550px] flex gap-2'>
+        <div className='absolute lg:bottom-[50px] lg:right-[165px] xl:bottom-[120px] xl:right-[305px] flex gap-2'>
           <div
-          onClick={() => handleLeftArrow()}
-          className='text-4xl bg-slate-600 rounded-full text-white hover:bg-teal-400 cursor-pointer'>
+            onClick={() => handleLeftArrow()}
+            className='text-4xl bg-[#22cb96] rounded-full text-white hover:bg-emerald-600 cursor-pointer'
+          >
             <IoIosArrowBack />
           </div>
           <div
-          onClick={() => handleRightArrow()}
-          className='text-4xl bg-slate-600 rounded-full text-white hover:bg-teal-400 cursor-pointer'>
+            onClick={() => handleRightArrow()}
+            className='text-4xl bg-[#22cb96] rounded-full text-white hover:bg-emerald-600 cursor-pointer'
+          >
             <IoIosArrowForward />
           </div>
         </div>

@@ -4,8 +4,8 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 const BannerText = () => {
   return (
-    <div className='absolute top-[30%] left-10 w-1/2 px-10'>
-      <p className='text-9xl Cox-bazar-title text-white'>Cox's Bazar</p>
+    <div className='absolute lg:top-[25%] xl:top-[30%] left-10 w-1/2 px-10'>
+      <p className='text-8xl Cox-bazar-title text-white'>Cox's Bazar</p>
       <p className='under-cox-bazar-title text-white'>
         Cox's Bazar, located in Bangladesh, is renowned for its breathtaking
         120-kilometer-long sandy beach, the world's longest uninterrupted sea
@@ -13,8 +13,8 @@ const BannerText = () => {
         diversity, it attracts tourists globally for relaxation and exploration.
       </p>
 
-      {/* Login Button */}
-      <div className='mt-10'>
+      {/* Booking Button */}
+      <div className='lg:mt-5 xl:mt-10'>
         <Link
         to=''
         className='w-40 button-login'>

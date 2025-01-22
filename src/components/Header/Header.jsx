@@ -6,7 +6,7 @@ import './Header.css';
 
 const Header = () => {
   return (
-    <div className='absolute top-0 z-50 right-5 w-screen px-20'>
+    <div className='absolute top-0 z-50 w-full px-20'>
       <div className='mx-auto px-4 flex items-center justify-between'>
         {/* Logo */}
         <div className='flex-shrink-0'>
@@ -27,7 +27,7 @@ const Header = () => {
             type='search'
           />
           <svg
-            className='size-6 absolute top-[46px] text-white left-[355px]'
+            className='size-6 absolute top-[46px] text-white xl:left-[355px] lg:left-[325px]'
             stroke='currentColor'
             strokeWidth='1.5'
             viewBox='0 0 24 24'
