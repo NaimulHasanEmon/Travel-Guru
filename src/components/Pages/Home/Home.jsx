@@ -55,9 +55,12 @@ const Home = () => {
 
       {/* Banner Texts */}
       <div>
-        <BannerText />
+        <BannerText
+        data={data}
+         />
       </div>
 
+      {/* Place card and buttons */}
       <div>
         {/* PlaceCard */}
         <div>

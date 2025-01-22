@@ -2,7 +2,9 @@ import { Link } from "react-router-dom";
 import "./BannerText.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
-const BannerText = () => {
+const BannerText = ({ data }) => {
+  const { placeName, info } = data;
+
   return (
     <div className='absolute lg:top-[25%] xl:top-[30%] left-10 w-1/2 px-10'>
       <p className='text-8xl Cox-bazar-title text-white'>Cox's Bazar</p>
@@ -15,9 +17,7 @@ const BannerText = () => {
 
       {/* Booking Button */}
       <div className='lg:mt-5 xl:mt-10'>
-        <Link
-        to=''
-        className='w-40 button-login'>
+        <Link to='' className='w-40 button-login'>
           <div className='flex items-center'>
             <span>Booking</span>
             <span>
