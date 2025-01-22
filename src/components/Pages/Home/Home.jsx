@@ -47,15 +47,19 @@ const Home = () => {
 
   return (
     <div className='flex'>
+
+      {/* Banner (bg img) */}
       <Banner
       data={data}
       photo={currentPhoto} />
 
+      {/* Banner Texts */}
       <div>
         <BannerText />
       </div>
 
       <div>
+        {/* PlaceCard */}
         <div>
           <PlaceCard
             data={data}
@@ -65,6 +69,7 @@ const Home = () => {
           />
         </div>
 
+        {/* Left and Right Arrows */}
         <div className='absolute lg:bottom-[50px] lg:right-[165px] xl:bottom-[120px] xl:right-[305px] flex gap-2'>
           <div
             onClick={() => handleLeftArrow()}
