@@ -2,11 +2,11 @@ import React from "react";
 import logo1 from "../../assets/images/photos/Logo1.png";
 // import logo2 from "../../assets/images/photos/Logo2.png";
 import { Link, NavLink } from "react-router-dom";
-import "./Header.css";
+import './Header.css';
 
 const Header = () => {
   return (
-    <div className='absolute top-0 right-5 w-screen px-20'>
+    <div className='absolute top-0 z-50 right-5 w-screen px-20'>
       <div className='mx-auto px-4 flex items-center justify-between'>
         {/* Logo */}
         <div className='flex-shrink-0'>
@@ -22,12 +22,12 @@ const Header = () => {
         <div>
           <input
             placeholder='Search...'
-            className='input shadow-lg focus:border-2 border-gray-300 px-5 bg-gray-400 bg-opacity-50 rounded-lg w-80 transition-all focus:w-96 outline-none placeholder:text-white'
+            className='input shadow-lg focus:border-2 border-gray-300 px-5 bg-gray-400 bg-opacity-50 rounded-lg lg:w-52 xl:w-80 2xl:w-80 transition-all focus:lg:w-64 focus:xl:w-96 outline-none placeholder:text-white placeholder:pl-5'
             name='search'
             type='search'
           />
           <svg
-            className='size-6 absolute top-3 right-3 text-gray-500'
+            className='size-6 absolute top-[46px] text-white left-[355px]'
             stroke='currentColor'
             strokeWidth='1.5'
             viewBox='0 0 24 24'
@@ -43,7 +43,7 @@ const Header = () => {
         </div>
 
         {/* Options */}
-        <div className='flex gap-12 text-xl text-white'>
+        <div className='flex lg:gap-6 xl:gap-12 lg:text-lg xl:text-xl text-white'>
           <div>
             <NavLink to='/news' className='hover:text-teal-400 rounded-md'>
               News

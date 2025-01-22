@@ -5,7 +5,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 const BannerText = () => {
   return (
     <div className='absolute top-[30%] left-10 w-1/2 px-10'>
-      <p className='text-9xl Cox-bazar-title text-white'>Cox's Bazar</p>
+      <p className='lg:text-7xl xl:text-8xl 2xl:text-9xl Cox-bazar-title text-white'>Cox's Bazar</p>
       <p className='under-cox-bazar-title text-white'>
         Cox's Bazar, located in Bangladesh, is renowned for its breathtaking
         120-kilometer-long sandy beach, the world's longest uninterrupted sea

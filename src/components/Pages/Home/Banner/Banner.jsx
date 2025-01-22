@@ -1,4 +1,4 @@
-import bg from '../../assets/images/photos/Rectangle 1.png';
+import bg from '../../../../assets/images/photos/Rectangle 1.png';
 
 const Banner = () => {
     return (

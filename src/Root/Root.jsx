@@ -1,11 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header/Header";
-import Banner from "../components/Banner/Banner";
+import Header from '../components/Header/Header';
 
 const Root = () => {
     return (
         <div>
-            <Banner></Banner>
             <Header></Header>
             <Outlet></Outlet>
         </div>
