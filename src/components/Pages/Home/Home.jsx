@@ -22,9 +22,15 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [photos]);
 
-  const handleLeftArrow = () => {};
+  // handle left arrow function
+  const handleLeftArrow = () => {
+    setPhotoIndex((prevIndex) => (prevIndex - 1 + photos.length) % photos.length);
+  };
 
-  const handleRightArrow = () => {};
+  // handle right arrow function
+  const handleRightArrow = () => {
+    setPhotoIndex((prevIndex) => (prevIndex + 1) % photos.length);
+  };
 
   // The selected photo based on the current index
   const currentPhoto = photos[photoIndex];
