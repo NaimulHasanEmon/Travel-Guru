@@ -6,13 +6,17 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 import coxBazar from "../../../assets/images/photos/CoxBazar.jpg";
-import sreemongol from "../../../assets/images/photos/Sreemongol.png";
-import sundarban from "../../../assets/images/photos/sundorbon.png";
-import sajek from "../../../assets/images/photos/Sajek.png";
+import Sreemangal from "../../../assets/images/photos/sreemongol.png";
+import Sundarbans from "../../../assets/images/photos/sundorbon.png";
+import Sajek from "../../../assets/images/photos/Sajek.png";
+import { useLoaderData } from "react-router-dom";
 
 const Home = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
-  const photos = [coxBazar, sreemongol, sundarban, sajek];
+  const photos = [coxBazar, Sreemangal, Sundarbans, Sajek];
+
+  const data = useLoaderData();
+  console.log(data);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -43,7 +47,9 @@ const Home = () => {
 
   return (
     <div className='flex'>
-      <Banner photo={currentPhoto} />
+      <Banner
+      data={data}
+      photo={currentPhoto} />
 
       <div>
         <BannerText />
@@ -52,6 +58,7 @@ const Home = () => {
       <div>
         <div>
           <PlaceCard
+            data={data}
             photo={currentPhoto}
             photos={photos}
             setActivePhoto={setActivePhoto} // Pass the handler to PlaceCard

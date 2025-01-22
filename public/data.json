@@ -1,0 +1,23 @@
+[
+    {
+      "placeId": 1,
+      "placeName": "Cox's Bazar",
+      "info": "Cox's Bazar is the longest sea beach in the world, offering breathtaking sunsets, golden sands, and serene ocean views. Perfect for relaxation and beach activities."
+    },
+    {
+      "placeId": 2,
+      "placeName": "Sreemangal",
+      "info": "Known as the tea capital of Bangladesh, Sreemangal is surrounded by lush tea gardens, rolling hills, and tranquil beauty. Ideal for nature lovers and adventurers."
+    },
+    {
+      "placeId": 3,
+      "placeName": "Sundarbans",
+      "info": "Home to the Royal Bengal Tiger, Sundarbans is the largest mangrove forest in the world. A haven for wildlife enthusiasts and nature photographers."
+    },
+    {
+      "placeId": 4,
+      "placeName": "Sajek",
+      "info": "Sajek Valley is a breathtaking hill station in Bangladesh, known for its cloud-kissed mountains, picturesque scenery, and vibrant tribal culture."
+    }
+  ]
+  
