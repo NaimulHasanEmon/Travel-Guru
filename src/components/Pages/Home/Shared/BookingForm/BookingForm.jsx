@@ -18,10 +18,8 @@ const BookingForm = () => {
 
         {/* Data Form */}
         <div class='absolute inset-0 left-[600px] flex flex-col items-center justify-center h-screen'>
-          <div class='w-full max-w-md bg-white rounded-lg shadow-md p-6'>
-            <h2 class='text-2xl font-bold text-gray-900 mb-4'>
-              Sign Up for {placeName}
-            </h2>
+          <div class={`w-full max-w-md bg-white bg-opacity-0 ${placeName === 'Sundarbans' && 'bg-opacity-25'} rounded-lg shadow-md p-6`}>
+            <h2 className={`text-5xl Cox-bazar-title font-bold text-gray-900 ${placeName === "Cox's Bazar" && 'text-white'} mb-4`}>{placeName}</h2>
             <form class='flex flex-col'>
               <label
                 class='text-sm mb-2 text-gray-900'
