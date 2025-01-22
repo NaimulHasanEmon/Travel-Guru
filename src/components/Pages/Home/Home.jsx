@@ -38,7 +38,7 @@ const Home = () => {
     <div>
       <div className='flex'>
         {/* Banner */}
-        <Banner photo={currentPlace.photo} />
+        <Banner photoBG={currentPlace.photoBG} />
 
         {/* Banner Text */}
         <BannerText

@@ -12,12 +12,12 @@ const PlaceCard = ({ currentPhoto, photos, setActivePhoto }) => {
               style={{
                 transform: isActive
                   ? `translateX(-400px)`
-                  : `translateY(${index * 60}px)`,
+                  : `translateY(${index * 45}px)`,
               }}
               className={`h-20 mx object-cover rounded-xl transition-all duration-700 ease-in-out cursor-pointer border-2 ${
                 isActive
                   ? "border-4 lg:rounded-2xl xl:rounded-3xl border-teal-400 lg:h-[384px] lg:w-64 xl:h-[432px] xl:w-72 absolute"
-                  : "w-20 hover:h-28 absolute hover:z-10"
+                  : "w-20 hover:h-28 absolute"
               }`}
               alt=""
             />
