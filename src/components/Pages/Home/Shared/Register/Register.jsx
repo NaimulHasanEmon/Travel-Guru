@@ -1,24 +1,62 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 // import { DiApple } from "react-icons/di";
 import { FaFacebook } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
+import { ToastContainer, toast } from "react-toastify";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../../../../provider/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+  const [registerError, setRegisterError] = useState("");
+
+  const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget)
-    const firstName = form.get('firstName');
-    const lastName = form.get('lastName');
-    const email = form.get('email');
-    const password = form.get('password');
-    const confirmPassword = form.get('confirmPassword');
-    console.log( firstName, lastName ,email, password, confirmPassword)
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const firstName = formData.get("firstName");
+    const lastName = formData.get("lastName");
+    const email = formData.get("email");
+    const password = formData.get("password");
+    const confirmPassword = formData.get("confirmPassword");
+
+    if (!(password === confirmPassword)) {
+      toast("Your passwords are not same! Please recheck.");
+      return;
+    }
+
+    if (password.length < 6) {
+      setRegisterError("Your Password must have at least 6 characters.");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      setRegisterError(
+        "Your Password must contain at least one uppercase letter."
+      );
+      return;
+    }
+
+    // Reset error messages
+    setRegisterError('');
+
+    createUser(email, password)
+      .then((result) => {
+          console.log(result);
+          form.reset();
+          navigate('/');
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+
+    // console.log(firstName, lastName, email, password, confirmPassword);
   };
 
   return (
-    <div className='flex justify-center items-center h-screen'>
-      <div className='border border-gray-100 shadow w-[360px] px-8 py-5 rounded-md bg-white'>
+    <div className='flex justify-center'>
+      <div className='border absolute top-[16%] border-gray-100 shadow w-[360px] px-8 py-5 rounded-md bg-white'>
         <div>
           <h1 className='text-4xl font-semibold'>Register</h1>
         </div>
@@ -29,28 +67,28 @@ const Register = () => {
             type='text'
             required
             className='p-2 mb-2 px-3 border-b-[2px] focus:border-blue-400 w-full outline-none bg-white transition duration-300'
-            />
+          />
           <input
             placeholder='Last Name'
             name='lastName'
             type='text'
             required
             className='p-2 mb-2 px-3 border-b-[2px] focus:border-blue-400 w-full outline-none bg-white transition duration-300'
-            />
+          />
           <input
             placeholder='Email'
             name='email'
             type='email'
             required
             className='p-2 mb-2 px-3 border-b-[2px] focus:border-blue-400 w-full outline-none bg-white transition duration-300'
-            />
+          />
           <input
             placeholder='Password'
             name='password'
             type='password'
             required
             className='p-2 mb-2 px-3 border-b-[2px] focus:border-blue-400 w-full outline-none bg-white transition duration-300'
-            />
+          />
           <input
             placeholder='Confirm Password'
             name='confirmPassword'
@@ -59,9 +97,12 @@ const Register = () => {
             className='p-2 px-3 border-b-[2px] focus:border-blue-400 w-full outline-none bg-white transition duration-300'
           />
           <div>
-            <button
-            type="submit"
-            className='mt-4 w-full button-login'>
+            {registerError && (
+              <div className='text-red-500 text-xs'>{registerError}</div>
+            )}
+          </div>
+          <div>
+            <button type='submit' className='mt-4 w-full button-login'>
               <span>Register</span>
             </button>
           </div>
@@ -114,6 +155,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

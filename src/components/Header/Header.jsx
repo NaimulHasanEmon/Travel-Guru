@@ -6,9 +6,20 @@ import "./Header.css";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
-  const { name } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login" || location.pathname === "/register";
+  const isLoginPage =
+    location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/hotelinfo";
+
+  const handleLogOut = () => {
+    logOut()
+     .then(() => {
+        console.log('User logged out successfully.');
+      })
+     .catch((error) => {
+        console.log("Error: " + error.message);
+      });
+  }
 
   return (
     <div className='absolute top-0 z-50 w-full px-20'>
@@ -55,7 +66,10 @@ const Header = () => {
           }`}
         >
           <div>
-            <NavLink to='/news' className='hover:text-teal-700 hover:underline mx-2 rounded-md hover:border-teal-700 hover:rounded-none'>
+            <NavLink
+              to='/news'
+              className='hover:text-teal-700 hover:underline mx-2 rounded-md hover:border-teal-700 hover:rounded-none'
+            >
               News
             </NavLink>
           </div>
@@ -68,12 +82,18 @@ const Header = () => {
             </NavLink>
           </div>
           <div>
-            <NavLink to='/blog' className='hover:text-teal-700 hover:underline rounded-md hover:border-teal-700 hover:rounded-none'>
+            <NavLink
+              to='/blog'
+              className='hover:text-teal-700 hover:underline rounded-md hover:border-teal-700 hover:rounded-none'
+            >
               Blog
             </NavLink>
           </div>
           <div>
-            <NavLink to='/contact' className='hover:text-teal-700 hover:underline rounded-md hover:border-teal-700 hover:rounded-none'>
+            <NavLink
+              to='/contact'
+              className='hover:text-teal-700 hover:underline rounded-md hover:border-teal-700 hover:rounded-none'
+            >
               Contact
             </NavLink>
           </div>
@@ -81,10 +101,22 @@ const Header = () => {
 
         {/* Login Button */}
         <div>
-          <p>{name}</p>
-          <Link to='/login' className='button-login'>
-            <span>LOGIN</span>
-          </Link>
+          {user ? (
+            <>
+              <Link
+              to='/login'
+              onClick={() => handleLogOut()}
+              className='button-login'>
+                <span>LOGOUT</span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link to='/login' className='button-login'>
+                <span>LOGIN</span>
+              </Link>
+            </>
+          )}
         </div>
       </div>
     </div>

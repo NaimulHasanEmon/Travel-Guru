@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "image": "../src/assets/images/photos/Rectangle 26.png",
+    "name": "Seaside Resort",
+    "guests": 4,
+    "bedrooms": 2,
+    "beds": 3,
+    "baths": 2,
+    "wifi": true,
+    "cancellationFlexibility": true,
+    "rating": 4.7,
+    "numberOfRatings": 120,
+    "pricePerNight": 120,
+    "totalCost": 360
+  },
+  {
+    "id": 2,
+    "image": "../src/assets/images/photos/Rectangle 27.png",
+    "name": "Ocean Breeze Inn",
+    "guests": 6,
+    "bedrooms": 3,
+    "beds": 4,
+    "baths": 3,
+    "wifi": true,
+    "cancellationFlexibility": false,
+    "rating": 4.5,
+    "numberOfRatings": 85,
+    "pricePerNight": 150,
+    "totalCost": 450
+  },
+  {
+    "id": 3,
+    "image": "../src/assets/images/photos/Rectangle 28.png",
+    "name": "Golden Sands Hotel",
+    "guests": 2,
+    "bedrooms": 1,
+    "beds": 1,
+    "baths": 1,
+    "wifi": true,
+    "cancellationFlexibility": true,
+    "rating": 4.9,
+    "numberOfRatings": 200,
+    "pricePerNight": 100,
+    "totalCost": 300
+  }
+]
