@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -14,3 +15,7 @@
     font-family: "Space Grotesk", serif;
     font-weight: 400;
   }
+  
+.nav-options {
+  font-family: "Playwrite AU SA", serif;
+}
