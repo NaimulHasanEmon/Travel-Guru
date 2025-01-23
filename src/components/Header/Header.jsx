@@ -1,21 +1,21 @@
-import React from "react";
-import logo1 from "../../assets/images/photos/Logo1.png";
-// import logo2 from "../../assets/images/photos/Logo2.png";
+import React, { useContext } from "react";
+import logoWhite from "../../assets/images/photos/LogoWhite.png";
+import logoBlack from "../../assets/images/photos/LogoBlack.png";
 import { Link, NavLink } from "react-router-dom";
 import './Header.css';
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Header = () => {
+  const {name} = useContext(AuthContext);
+
   return (
     <div className='absolute top-0 z-50 w-full px-20'>
       <div className='mx-auto px-4 flex items-center justify-between'>
         {/* Logo */}
         <div className='flex-shrink-0'>
           <Link to='/'>
-            <img className='h-28' src={logo1} alt='Travel Guru' />
+            <img className='h-28' src={logoWhite} alt='Travel Guru' />
           </Link>
-          {/* <Link to='/'>
-            <img className='h-28' src={logo2} alt='Travel Guru' />{" "}
-          </Link> */}
         </div>
 
         {/* Search */}
@@ -71,6 +71,7 @@ const Header = () => {
 
         {/* Login Button */}
         <div>
+          <p>{name}</p>
           <Link
           to='/login'
           className='button-login'>
@@ -83,3 +84,4 @@ const Header = () => {
 };
 
 export default Header;
+1

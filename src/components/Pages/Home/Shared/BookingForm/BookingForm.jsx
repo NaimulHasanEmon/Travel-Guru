@@ -8,12 +8,12 @@ const BookingForm = () => {
 
   // Find the information of the place based on the clicked id
   const place = places.find((item) => item.id === parseInt(id));
-  const { placeName, info, id: placeId, photo } = place;
+  const { id:placeId, placeName, info, photoBG } = place;
 
   return (
     <div>
       <div>
-        <Banner photo={photo}></Banner>
+        <Banner photoBG={photoBG}></Banner>
         <BannerText placeName={placeName} id={placeId} info={info}></BannerText>
 
         {/* Data Form */}
