@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import logoWhite from "../../assets/images/photos/LogoWhite.png";
 import logoBlack from "../../assets/images/photos/LogoBlack.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -8,7 +8,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 const Header = () => {
   const { name } = useContext(AuthContext);
   const location = useLocation();
-  const isLoginPage = location.pathname === "/login";
+  const isLoginPage = location.pathname === "/login" || location.pathname === "/register";
 
   return (
     <div className='absolute top-0 z-50 w-full px-20'>
