@@ -8,11 +8,18 @@
     "beds": 3,
     "baths": 2,
     "wifi": true,
-    "cancellationFlexibility": true,
     "rating": 4.7,
     "numberOfRatings": 120,
     "pricePerNight": 120,
-    "totalCost": 360
+    "totalCost": 160,
+    "pets": true,
+    "ac": true,
+    "tv": true,
+    "kitchen": true,
+    "miniFridge": true,
+    "seatingArea": true,
+    "parking": true,
+    "coffeeMaker": true
   },
   {
     "id": 2,
@@ -23,11 +30,18 @@
     "beds": 4,
     "baths": 3,
     "wifi": true,
-    "cancellationFlexibility": false,
     "rating": 4.5,
     "numberOfRatings": 85,
     "pricePerNight": 150,
-    "totalCost": 450
+    "totalCost": 175,
+    "pets": false,
+    "ac": true,
+    "tv": true,
+    "kitchen": true,
+    "miniFridge": true,
+    "seatingArea": true,
+    "parking": false,
+    "coffeeMaker": true
   },
   {
     "id": 3,
@@ -38,10 +52,17 @@
     "beds": 1,
     "baths": 1,
     "wifi": true,
-    "cancellationFlexibility": true,
     "rating": 4.9,
     "numberOfRatings": 200,
     "pricePerNight": 100,
-    "totalCost": 300
+    "totalCost": 130,
+    "pets": false,
+    "ac": true,
+    "tv": true,
+    "kitchen": false,
+    "miniFridge": true,
+    "seatingArea": false,
+    "parking": true,
+    "coffeeMaker": true
   }
 ]
