@@ -97,6 +97,14 @@ const Header = () => {
               Contact
             </NavLink>
           </div>
+          <div>
+            <NavLink
+              to='/hotelinfo'
+              className='hover:text-teal-700 hover:underline rounded-md hover:border-teal-700 hover:rounded-none'
+            >
+              Hotel Info
+            </NavLink>
+          </div>
         </div>
 
         {/* Login Button */}
