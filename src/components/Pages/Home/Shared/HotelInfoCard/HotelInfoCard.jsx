@@ -38,11 +38,11 @@ const HotelInfoCard = ({ hotel }) => {
   return (
     <div>
       <div className='flex bg-base-100 shadow-xl rounded-2xl'>
-        <div className='w-1/3'>
+        <div className='w-1/3 my-auto'>
           <img
             src={image}
             alt='Shoes'
-            className='h-40 w-full object-cover p-2 rounded-2xl'
+            className='xl:h-full w-full object-cover p-2 rounded-2xl'
           />
         </div>
         <div className='w-2/3 p-2'>
