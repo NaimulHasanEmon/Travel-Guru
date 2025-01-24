@@ -20,17 +20,21 @@ const HotelInfo = () => {
   return (
     <div>
       <div className='flex justify-center'>
-        <div className='absolute lg:top-[20%] xl:top-[15%]'>
-          <div className='flex justify-center gap-10 w-screen px-32 overflow-x-hidden'>
+        <div className='absolute lg:top-[35%] xl:top-[15%]'>
+          <div className='flex justify-center gap-10 w-screen px-32'>
             <div className='flex flex-col justify-center gap-2 w-2/3'>
               {allHotel.map((hotel) => (
-                <HotelInfoCard key={hotel.id} hotel={hotel} onLocationChange={handleLocationChange}></HotelInfoCard>
+                <HotelInfoCard
+                  key={hotel.id}
+                  hotel={hotel}
+                  onLocationChange={handleLocationChange}
+                ></HotelInfoCard>
               ))}
             </div>
             <div className='w-1/3'>
-              <div className="sticky top-20"><HotelMap
-              location={location}
-              ></HotelMap></div>
+              <div className='sticky lg:top-28 xl:top-32'>
+                <HotelMap location={location}></HotelMap>
+              </div>
             </div>
           </div>
         </div>

@@ -17,7 +17,7 @@ const BookingForm = () => {
         <BannerText placeName={placeName} id={placeId} info={info}></BannerText>
 
         {/* Data Form */}
-        <div class='absolute inset-0 left-[600px] flex flex-col items-center justify-center h-screen'>
+        <div class='fixed inset-0 left-[600px] top-[7%] flex flex-col items-center justify-center h-screen'>
           <div class={`w-full max-w-md bg-white bg-opacity-0 ${placeName === 'Sundarbans' && 'bg-opacity-25'} rounded-lg shadow-md p-6`}>
             <h2 className={`text-5xl Cox-bazar-title font-bold text-gray-900 ${placeName === "Cox's Bazar" && 'text-white'} mb-4`}>{placeName}</h2>
             <form class='flex flex-col'>

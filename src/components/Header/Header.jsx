@@ -22,7 +22,7 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute top-0 z-50 w-full px-20'>
+    <div className={`fixed top-0 z-50 w-full px-20 ${isLoginPage && 'bg-white'}`}>
       <div className='mx-auto px-4 flex items-center justify-between'>
         {/* Logo */}
         <div className='flex-shrink-0'>
@@ -44,7 +44,7 @@ const Header = () => {
             type='search'
           />
           <svg
-            className='size-6 absolute top-[46px] text-white xl:left-[355px] lg:left-[325px]'
+            className='size-6 fixed top-[46px] text-white xl:left-[285px] lg:left-[265px]'
             stroke='currentColor'
             strokeWidth='1.5'
             viewBox='0 0 24 24'
