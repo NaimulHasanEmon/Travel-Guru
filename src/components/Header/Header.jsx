@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import logoWhite from "../../assets/images/photos/LogoWhite.png";
 import logoBlack from "../../assets/images/photos/LogoBlack.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -9,20 +9,24 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const location = useLocation();
   const isLoginPage =
-    location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/hotelinfo";
+    location.pathname === "/login" ||
+    location.pathname === "/register" ||
+    location.pathname === "/hotelinfo";
 
   const handleLogOut = () => {
     logOut()
-     .then(() => {
-        console.log('User logged out successfully.');
+      .then(() => {
+        console.log("User logged out successfully.");
       })
-     .catch((error) => {
+      .catch((error) => {
         console.log("Error: " + error.message);
       });
-  }
+  };
 
   return (
-    <div className={`fixed top-0 z-50 w-full px-20 ${isLoginPage && 'bg-white'}`}>
+    <div
+      className={`fixed top-0 z-50 w-full px-20 ${isLoginPage && "bg-white"}`}
+    >
       <div className='mx-auto px-4 flex items-center justify-between'>
         {/* Logo */}
         <div className='flex-shrink-0'>
@@ -39,24 +43,10 @@ const Header = () => {
         <div className={isLoginPage && "hidden"}>
           <input
             placeholder='Search...'
-            className='input shadow-lg focus:border-2 border-gray-300 px-5 bg-gray-500 bg-opacity-10 rounded-lg lg:w-52 xl:w-80 2xl:w-80 transition-all focus:lg:w-64 focus:xl:w-96 outline-none placeholder:text-white placeholder:pl-5'
+            className='input shadow-lg focus:border-2 border-gray-300 bg-gray-500 bg-opacity-10 rounded-lg lg:w-52 xl:w-80 2xl:w-80 transition-all focus:lg:w-64 focus:xl:w-96 outline-none placeholder:text-white placeholder:pl-5'
             name='search'
             type='search'
           />
-          <svg
-            className='size-6 fixed top-[46px] text-white xl:left-[285px] lg:left-[265px]'
-            stroke='currentColor'
-            strokeWidth='1.5'
-            viewBox='0 0 24 24'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path
-              d='m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z'
-              strokeLinejoin='round'
-              strokeLinecap='round'
-            />
-          </svg>
         </div>
 
         {/* Options */}
@@ -112,9 +102,10 @@ const Header = () => {
           {user ? (
             <>
               <Link
-              to='/login'
-              onClick={() => handleLogOut()}
-              className='button-login'>
+                to='/login'
+                onClick={() => handleLogOut()}
+                className='button-login'
+              >
                 <span>LOGOUT</span>
               </Link>
             </>
