@@ -37,6 +37,7 @@ const HotelInfoCard = ({ hotel }) => {
 
   return (
     <div>
+      {/* Cards */}
       <div className='flex bg-base-100 shadow-xl rounded-2xl'>
         <div className='w-1/3 my-auto'>
           <img
