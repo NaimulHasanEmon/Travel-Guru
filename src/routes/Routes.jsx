@@ -4,7 +4,7 @@ import Home from '../components/Pages/Home/Home';
 import BookingForm from '../components/Pages/Home/Shared/BookingForm/BookingForm';
 import Login from "../components/Pages/Home/Shared/Login/Login";
 import Register from "../components/Pages/Home/Shared/Register/Register";
-import HotelInfo from "../components/Pages/Home/Shared/HotelInfo/HotelInfo";
+import HotelInfo from "../components/Pages/Home/Shared/AllHotelInfo/HotelInfo/HotelInfo";
 
 const router = createBrowserRouter([
   {

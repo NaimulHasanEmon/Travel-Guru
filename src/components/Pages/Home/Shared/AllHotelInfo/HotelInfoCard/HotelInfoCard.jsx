@@ -12,7 +12,7 @@ import { FaCar } from "react-icons/fa";
 import { GiCoffeeCup } from "react-icons/gi";
 import { FaStar } from "react-icons/fa";
 
-const HotelInfoCard = ({ hotel }) => {
+const HotelInfoCard = ({ hotel, onLocationChange }) => {
   const {
     image,
     name,
@@ -21,7 +21,6 @@ const HotelInfoCard = ({ hotel }) => {
     beds,
     baths,
     wifi,
-    cancellationFlexibility,
     rating,
     numberOfRatings,
     pricePerNight,
@@ -33,6 +32,8 @@ const HotelInfoCard = ({ hotel }) => {
     miniFridge,
     parking,
     coffeeMaker,
+    latitude,
+    longitude,
   } = hotel;
 
   return (
@@ -185,7 +186,7 @@ const HotelInfoCard = ({ hotel }) => {
             <div className='flex items-center gap-1'>
               <div>
                 <div className='flex items-center gap-1'>
-                <div className='font-bold'>
+                  <div className='font-bold'>
                     <span>${totalCost}</span>
                   </div>
                   <div>
@@ -194,6 +195,16 @@ const HotelInfoCard = ({ hotel }) => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Show On Map Button */}
+          <div className='mt-2'>
+            <button
+              className='bg-blue-500 w-full text-white py-1 px-3 rounded hover:bg-blue-700'
+              onClick={() => onLocationChange(latitude, longitude)}
+            >
+              Show on Map
+            </button>
           </div>
         </div>
       </div>
