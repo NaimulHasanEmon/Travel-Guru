@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "../src/assets/images/photos/Rectangle 26.png",
+    "image": "../src/assets/images/Rectangle 26.png",
     "name": "Radisson Blu Chattogram Bay View",
     "guests": 4,
     "bedrooms": 2,
@@ -25,7 +25,7 @@
   },
   {
     "id": 2,
-    "image": "../src/assets/images/photos/Rectangle 27.png",
+    "image": "../src/assets/images/Rectangle 27.png",
     "name": "Hotel Agrabad",
     "guests": 6,
     "bedrooms": 3,
@@ -49,7 +49,7 @@
   },
   {
     "id": 3,
-    "image": "../src/assets/images/photos/Rectangle 28.png",
+    "image": "../src/assets/images/Rectangle 28.png",
     "name": "The Peninsula Chittagong",
     "guests": 2,
     "bedrooms": 1,
