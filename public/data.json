@@ -3,35 +3,35 @@
     "id": 1,
     "placeName": "Saint Martin",
     "info": "Saint Martin, the only coral island in Bangladesh, is a tropical paradise with crystal-clear waters, white sandy beaches, and vibrant coral reefs. It is a perfect destination for snorkeling, scuba diving, and enjoying fresh seafood. The tranquil environment and stunning sunsets make it an idyllic retreat for travelers.",
-    "photo": "../src/assets/images/SaintMartin.jpg",
-    "photoBG": "../src/assets/images/SaintMartinBG.jpg"
+    "photo": "/Images/SaintMartin.jpg",
+    "photoBG": "Images/SaintMartinBG.jpg"
   },
   {
     "id": 2,
     "placeName": "Cox's Bazar",
     "info": "Cox's Bazar, the world's longest unbroken sea beach, stretches 120 kilometers along the southeastern coastline of Bangladesh. Renowned for its golden sands, turquoise waters, and stunning sunsets, it offers a perfect escape for travelers. Visitors can explore nearby attractions like Himchari, Inani Beach, and the vibrant local markets for handicrafts.",
-    "photo": "../src/assets/images/CoxBazar.png",
-    "photoBG": "../src/assets/images/CoxBazarBG.png"
+    "photo": "/Images/CoxBazar.png",
+    "photoBG": "/Images/CoxBazarBG.png"
   },
   {
     "id": 3,
     "placeName": "Sreemangal",
     "info": "Known as the tea capital of Bangladesh, Sreemangal is a serene town surrounded by lush green tea gardens, dense rainforests, and picturesque landscapes. It is a haven for nature lovers, offering attractions like Lawachara National Park, Madhabpur Lake, and the famous Seven Color Tea. Wildlife enthusiasts can spot rare species here.",
-    "photo": "../src/assets/images/Sreemangal.jpg",
-    "photoBG": "../src/assets/images/SreemangalBG.jpg"
+    "photo": "/Images/Sreemangal.jpg",
+    "photoBG": "/Images/SreemangalBG.jpg"
   },
   {
     "id": 4,
     "placeName": "Sundarbans",
     "info": "The Sundarbans, the largest mangrove forest in the world, is a UNESCO World Heritage Site and the natural habitat of the Royal Bengal Tiger. This vast delta is crisscrossed by rivers and tidal waterways, offering unique opportunities for wildlife exploration, bird watching, and serene boat rides amidst rich biodiversity.",
-    "photo": "../src/assets/images/Sundarbans.jpg",
-    "photoBG": "../src/assets/images/SundarbansBG.jpg"
+    "photo": "/Images/Sundarbans.jpg",
+    "photoBG": "/Images/SundarbansBG.jpg"
   },
   {
     "id": 5,
     "placeName": "Sajek",
     "info": "Sajek Valley, located in the Chittagong Hill Tracts, is a mesmerizing hill station often referred to as the “Roof of Rangamati.” Famous for its cloud-kissed mountains and vibrant tribal culture, Sajek offers panoramic views, adventure trails, and warm hospitality. It is a paradise for photography enthusiasts and peace seekers alike.",
-    "photo": "../src/assets/images/Sajek.jpg",
-    "photoBG": "../src/assets/images/SajekBG.jpg"
+    "photo": "/Images/Sajek.jpg",
+    "photoBG": "/Images/SajekBG.jpg"
   }
 ]

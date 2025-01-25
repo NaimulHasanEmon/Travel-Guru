@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import logoWhite from "../../assets/images/LogoWhite.png";
-import logoBlack from "../../assets/images/LogoBlack.png";
+import logoWhite from "/Images/LogoWhite.png";
+import logoBlack from "/Images/LogoBlack.png";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Header.css";
 import { AuthContext } from "../../provider/AuthProvider";
